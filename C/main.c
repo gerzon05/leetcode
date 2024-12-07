@@ -100,6 +100,21 @@ int main(){
   };
   printf("%d", sumanotas)
 
+  // Punteros
+  // *: hace referencia a un puntero
+  // &: para acceder al espacio de memoria
+  int valor = 10;          // obtener el valor
+  int *valor_puntero = &valor; // obtener direccion de memoria
+
+  // **: apuntar al puntero del puntero
+  int **puntero_a_puntero = &valor_puntero;
+
+  // Imprimir la direccion de memoria del puntero
+  printf("%p\n", valor_puntero);
+
+  // Imprimir el valor
+  printf("%d\n", *valor_puntero)
+
   return 0;
 }
 
