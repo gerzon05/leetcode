@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 // Caracteres de modificación
 
@@ -89,22 +90,33 @@ int main(){
     contador++;
   } while (contador < 5);
   printf("%d", contador);
+  printf("\n");
 
   // for
-  int nota, sumanotas = 0;
+  int *sumanotas = malloc(sizeof(int));
+  if (sumanotas == NULL)
+  {
+    fprintf(stderr, "Error: espacio de memoria insifucinete.\n");
+    return (1);
+  }
+
+  *sumanotas = 0;
   for (int i = 0; i < 5; i++)
   {
+    int nota;
     printf("Ingresa la nota: ");
     scanf("%d", &nota);
-    sumanotas += nota;
+    *sumanotas += nota;
   };
-  printf("%d", sumanotas)
+  printf("La suma de las notas es: %d\n", *sumanotas);
+
+  free(sumanotas);
 
   // Punteros
-  // *: hace referencia a un puntero
-  // &: para acceder al espacio de memoria
-  int valor = 10;          // obtener el valor
-  int *valor_puntero = &valor; // obtener direccion de memoria
+  // *: accede al valor de varibale que se esta apuntado
+  // &: obtiene la direccion de memomoria de la variable que se esta apuntado
+  int valornumero = 10;
+  int *valor_puntero = &valornumero;
 
   // **: apuntar al puntero del puntero
   int **puntero_a_puntero = &valor_puntero;
@@ -113,7 +125,18 @@ int main(){
   printf("%p\n", valor_puntero);
 
   // Imprimir el valor
-  printf("%d\n", *valor_puntero)
+  printf("%d\n", *valor_puntero);
+
+  // Arrays
+
+  int arrays[3] = {1, 2, 3};
+
+  for (int i = 0; i < 3; i++)
+  {
+    printf("%d ", arrays[i]);
+  }
+
+  printf("\n");
 
   return 0;
 }
