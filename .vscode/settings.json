@@ -2,6 +2,7 @@
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
     "*.vue": "vue",
-    "stdbool.h": "c"
+    "stdbool.h": "c",
+    "stdio.h": "c"
   }
 }
