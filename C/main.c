@@ -2,6 +2,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// variables
+
+// char, int, float, double
+// Modificadores de acceso:
+// const = valor constante -> const int x = 3435;
+// volatile = valor es modificado externamente (proceso externo al sistema)
+
+// Modificadores de tipos:
+// signed | char - int | con signo por defecto
+// unsigned | char - int | sin signo
+// log | int - double | largo
+// short | int | corto
+
 // Caracteres de modificación
 
 // %c Unico caracter
@@ -14,7 +27,8 @@
 // %s Valor cadena de caracteres
 // %p Dirección de memoria
 
-#define PI 3.141516
+// #define PI 3.141516 -> otra forma de declarar variables
+const float PI =  3.141516;
 
 int main(){
   // Variables
