@@ -1,7 +1,7 @@
+#include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
 #define MAX_LIMIT 100
 #define MIN 1
@@ -18,19 +18,15 @@ bool word_is_palindrome() {
 
   int lenght = strlen(word) - 1;
 
-  if (lenght <= 1)
-  {
+  if (lenght <= 1) {
     return word_palindrome;
   }
-  
 
-  for (int i = 0; i < lenght / 2; i++)
-  {
+  for (int i = 0; i < lenght / 2; i++) {
     char current_char = tolower(word[i]);
     char opposite_char = tolower(word[lenght - i - MIN]);
 
-    if (current_char != opposite_char)
-    {
+    if (current_char != opposite_char) {
       word_palindrome = false;
       break;
     }
@@ -41,8 +37,7 @@ bool word_is_palindrome() {
 
 int main() {
   bool palindrome = word_is_palindrome();
-  if (palindrome)
-  {
+  if (palindrome) {
     printf("The word is a palindrome\n");
   } else {
     printf("The word is not a palindrome\n");

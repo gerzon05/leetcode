@@ -28,9 +28,9 @@
 // %p Dirección de memoria
 
 // #define PI 3.141516 -> otra forma de declarar variables
-const float PI =  3.141516;
+const float PI = 3.141516;
 
-int main(){
+int main() {
   // Variables
   int number = 12;
   float my_float_number = 12.123;
@@ -47,8 +47,8 @@ int main(){
   printf("Tu edad es: %d\n", age);
 
   // Condicionales
-  if (age > 18){
-   printf("Eres mayor de edad\n");
+  if (age > 18) {
+    printf("Eres mayor de edad\n");
   } else {
     printf("Eres menor de edad\n");
   }
@@ -59,16 +59,16 @@ int main(){
   printf("1. Mujer\n");
   scanf("%d", &genre);
 
-  switch (genre){
-  case 0:
-    printf("Eres Hombre\n");
-    break;
-  case 1:
-    printf("Eres Mujer\n");
-    break;
-  default:
-    printf("No existes en este mundo\n");
-    break;
+  switch (genre) {
+    case 0:
+      printf("Eres Hombre\n");
+      break;
+    case 1:
+      printf("Eres Mujer\n");
+      break;
+    default:
+      printf("No existes en este mundo\n");
+      break;
   }
 
   // Calcular la masa
@@ -80,27 +80,26 @@ int main(){
   printf("Escibre tu altura en metros: ");
   scanf("%f", &height);
 
-  if (weight == 0 || height == 0){
+  if (weight == 0 || height == 0) {
     printf("No se puede calcular la masa\n");
     return 1;
   };
 
   float bmi = weight / (height * height);
 
-  if (bmi < 18.5){
+  if (bmi < 18.5) {
     printf("Se encuentra bajo de peso\n");
-  } else if (bmi > 18.5 && bmi < 24.9){
+  } else if (bmi > 18.5 && bmi < 24.9) {
     printf("Se encuentra en un peso normal\n");
-  }else if (bmi > 25 && bmi < 29.9){
+  } else if (bmi > 25 && bmi < 29.9) {
     printf("Se encuentra en un peso muy alto\n");
   } else {
     printf("Se encuentra en obesidad\n");
   };
 
-  //do  While
+  // do  While
   int contador = 0;
-  do
-  {
+  do {
     contador++;
   } while (contador < 5);
   printf("%d", contador);
@@ -108,15 +107,13 @@ int main(){
 
   // for
   int *sumanotas = malloc(sizeof(int));
-  if (sumanotas == NULL)
-  {
+  if (sumanotas == NULL) {
     fprintf(stderr, "Error: espacio de memoria insifucinete.\n");
     return (1);
   }
 
   *sumanotas = 0;
-  for (int i = 0; i < 5; i++)
-  {
+  for (int i = 0; i < 5; i++) {
     int nota;
     printf("Ingresa la nota: ");
     scanf("%d", &nota);
@@ -145,8 +142,7 @@ int main(){
 
   int arrays[3] = {1, 2, 3};
 
-  for (int i = 0; i < 3; i++)
-  {
+  for (int i = 0; i < 3; i++) {
     printf("%d ", arrays[i]);
   }
 
@@ -154,5 +150,3 @@ int main(){
 
   return 0;
 }
-
-

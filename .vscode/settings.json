@@ -1,8 +1,13 @@
 {
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
     "*.vue": "vue",
     "stdbool.h": "c",
     "stdio.h": "c"
-  }
+  },
+  "C_Cpp.clang_format_style": "{BasedOnStyle: Google, BraceWrapping: {AfterFunction: false, AfterControlStatement: false}, BreakBeforeBraces: Attach}"
 }
