@@ -27,6 +27,21 @@
 // %s Valor cadena de caracteres
 // %p Dirección de memoria
 
+// CONSTANTES DE BARRA INVERTIDA:
+// \b -> retroceso
+// \f -> Alimentación de hoja
+// \n -> Nueva linea
+// \r -> Retorno de carro
+// \t -> Tabulador horizontal
+// \" -> Doble comilla
+// \' -> Simple comilla
+// \0 -> Nulo
+// \\ -> Barra invertida
+// \v -> Tabulador vertical
+// \a -> Alerta
+// \o -> Constante octal
+// \x -> Constante hexadecimal
+
 // #define PI 3.141516 -> otra forma de declarar variables
 const float PI = 3.141516;
 
