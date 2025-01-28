@@ -1,5 +1,7 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define SIZE 5
 
@@ -148,6 +150,61 @@ int main() {
   // ejercicio numeros pares e impares
   printf("Numeros pares e impares\n");
   par_impar_numbers(10);
+
+  // Arrays de caracteres
+  // Arrays Basicos
+  char vowels[5] = {'a', 'e', 'i', 'o', 'u'};
+  char letters[] = {'x', 'y', 'z'};
+
+  printf("Mostrando un Arrays de caracteres \n");
+  for (int i = 0; i < 5; i++) {
+    printf("%c", vowels[i]);
+  }
+
+  printf("\nMostrando un Arrays de letras \n");
+  for (int i = 0; i < 3; i++) {
+    printf("%c", letters[i]);
+  }
+
+  // // Forma 1: Array con terminador nulo '\0'
+  char name[6] = {'P', 'e', 'd', 'r', 'o'};
+  // // Forma 2: Usando literal de string (más común)
+  char name2[] = "Pedro";  // Automáticamente añade '\0'
+
+  char text[] = "hola Gerzon";
+  int lenght = strlen(text);  // Obtener la longitud
+  printf("\n%d", lenght);
+  // strcpy(text, "lenguaje C"); // Copiar string
+  // strcat(text, "Gerzon"); // concatenar
+  bool compare = strcmp(text, "hola");
+  printf("\n%d", compare);
+  printf("\n%s", text);
+
+  // Arrays bidimensionales
+  // Forma 1
+  char languages[3][10] = {"C", "C++", "C#"};
+
+  // Forma 2
+  char *languages_2[] = {"C", "C++", "C#"};
+
+  for (int i = 0; i < 3; i++) {
+    printf("\n%s", languages_2[i]);
+  }
+
+  // Lectura y escritura:
+  const int LIMITED = 100;
+  char save_name[LIMITED];
+  printf("\n");
+  fgets(save_name, LIMITED, stdin);  // Lectura segura
+  // scanf("\n%s", save_name);          // Lectura hasta espacio
+  // printf("%s", save_name);  // Impresión
+  puts(save_name);  // Impresión con salto de linea
+
+  // Manipulación avanzada:
+  char texto[100] = "Hola Mundo";
+  char *token = strtok(texto, " ");          // Dividir string
+  char *subcadena = strstr(texto, "Mundo");  // Buscar subcadena
+  char *posicion = strchr(texto, 'a');       // Buscar carácter
 
   return (0);
 }
