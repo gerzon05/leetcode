@@ -15,6 +15,9 @@ Leetcode exercises for programming skills.
 
 **APIs**
 - https://ipquery.io
+
+**NODE**
+- https://github.com/goldbergyoni/nodebestpractices/blob/spanish-translation/README.spanish.md
 ## License
 
 [MIT](./LICENSE)
