@@ -20,20 +20,3 @@
 //
 
 // =============================================================================
-
-class ListNode {
-  val: number
-  next: ListNode | null
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = (val === undefined ? 0 : val)
-    this.next = (next === undefined ? null : next)
-  }
-}
-
-function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-  return l1 || l2
-};
-
-const l1 = new ListNode(342,[2,4,3]);
-
-console.log(addTwoNumbers([],[]));

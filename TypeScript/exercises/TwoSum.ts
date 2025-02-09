@@ -22,22 +22,22 @@
 // =============================================================================
 
 function twoSum(nums: number[], target: number): number[] {
-  const sum: number[] = []
-  let suma: number = 0
+  const sum: number[] = [];
+  let suma = 0;
   for (let index = 0; index < nums.length; index++) {
-    for (let index2 = index+1; index2 < nums.length; index2++) {
-      suma = nums[index] + nums[index2]
+    for (let index2 = index + 1; index2 < nums.length; index2++) {
+      suma = nums[index] + nums[index2];
       if (suma === target) {
-        sum.push(index,index2)
+        sum.push(index, index2);
       }
-      suma = 0
+      suma = 0;
     }
   }
-  return sum
-};
+  return sum;
+}
 
-console.log(twoSum([2, 7, 11],9))
-console.log(twoSum([3,3],6))
-console.log(twoSum([4, 2, 3], 6))
+console.log(twoSum([2, 7, 11], 9));
+console.log(twoSum([3, 3], 6));
+console.log(twoSum([4, 2, 3], 6));
 
 // ✔️

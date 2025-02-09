@@ -14,10 +14,13 @@ Leetcode exercises for programming skills.
 - https://easingwizard.com
 
 **APIs**
+
 - https://ipquery.io
 
 **NODE**
+
 - https://github.com/goldbergyoni/nodebestpractices/blob/spanish-translation/README.spanish.md
+
 ## License
 
 [MIT](./LICENSE)

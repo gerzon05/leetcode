@@ -57,27 +57,27 @@ const romanNumerals: Record<string, number> = {
   "L": 50,
   "C": 100,
   "D": 500,
-  "M": 1000
-}
+  "M": 1000,
+};
 
 function romanToInt(s: string): object | string {
-  const letterRomanArrays: string[] = s.split("")
-  let Numbers: number[] = []
-  let total: number[] = []
-  let numberRoman: string[] = []
+  const letterRomanArrays: string[] = s.split("");
+  const Numbers: number[] = [];
+  const total: number[] = [];
+  const numberRoman: string[] = [];
 
   const result = {
     numeroRomano: "",
-    numeroEntero: 0
-  }
+    numeroEntero: 0,
+  };
 
   for (const number of letterRomanArrays) {
     const romanNumeralInteger = romanNumerals[number];
 
-    if (!romanNumeralInteger) continue
+    if (!romanNumeralInteger) continue;
 
-    Numbers.push(romanNumeralInteger)
-    numberRoman.push(number)
+    Numbers.push(romanNumeralInteger);
+    numberRoman.push(number);
   }
 
   let countNumber = 1;
@@ -89,27 +89,26 @@ function romanToInt(s: string): object | string {
       Numbers[i] === Numbers[i + 1]
     ) {
       if (previousNumber === Numbers[i]) {
-        countNumber += 1
+        countNumber += 1;
       }
-      
+
       if (countNumber === 3) {
-        previousNumber = 0
-        countNumber = 0
-        return "El Numero Romano se repite mas de 3 veces"
+        previousNumber = 0;
+        countNumber = 0;
+        return "El Numero Romano se repite mas de 3 veces";
       } else if (previousNumber != Numbers[i]) {
-        previousNumber = 0
-        countNumber = 1
+        previousNumber = 0;
+        countNumber = 1;
       }
       total.push(Numbers[i]);
-      previousNumber = Numbers[i]
-      
+      previousNumber = Numbers[i];
     } else if (Numbers[i] < Numbers[i + 1]) {
       const result = Numbers[i + 1] - Numbers[i];
       const value = Object.fromEntries(
-        Object.entries(romanNumerals).filter(([_, value]) => value === result)
+        Object.entries(romanNumerals).filter(([_, value]) => value === result),
       );
       if (value) {
-        return "El numero Romano no Existe"
+        return "El numero Romano no Existe";
       }
       total.push(result);
       i++;
@@ -118,8 +117,10 @@ function romanToInt(s: string): object | string {
     }
   }
 
-  result.numeroRomano = numberRoman.join("")
-  result.numeroEntero = total.reduce((acc, value) => acc + value, 0)
+  result.numeroRomano = numberRoman.join("");
+  result.numeroEntero = total.reduce((acc, value) => acc + value, 0);
 
-  return result
-};
+  return result;
+}
+
+console.log(romanToInt("XX"))

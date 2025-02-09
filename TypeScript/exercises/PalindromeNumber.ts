@@ -3,7 +3,7 @@
 // =============================================================================
 //
 // Enunciado en Inglés:
-// Given an integer x, return true if x is a 
+// Given an integer x, return true if x is a
 // palindrome
 // , and false otherwise.
 //
