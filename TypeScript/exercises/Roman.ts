@@ -84,10 +84,7 @@ function romanToInt(s: string): object | string {
   let previousNumber = 0;
 
   for (let i = 0; i < Numbers.length; i++) {
-    if (
-      Numbers[i] > Numbers[i + 1] ||
-      Numbers[i] === Numbers[i + 1]
-    ) {
+    if (Numbers[i] >= Numbers[i + 1]) {
       if (previousNumber === Numbers[i]) {
         countNumber += 1;
       }
