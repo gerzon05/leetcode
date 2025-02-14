@@ -60,16 +60,11 @@ const romanNumerals: Record<string, number> = {
   "M": 1000,
 };
 
-function romanToInt(s: string): object | string {
+export default function romanToInt(s: string): number | string {
   const letterRomanArrays: string[] = s.split("");
   const Numbers: number[] = [];
   const total: number[] = [];
   const numberRoman: string[] = [];
-
-  const result = {
-    numeroRomano: "",
-    numeroEntero: 0,
-  };
 
   for (const number of letterRomanArrays) {
     const romanNumeralInteger = romanNumerals[number];
@@ -101,10 +96,10 @@ function romanToInt(s: string): object | string {
       previousNumber = Numbers[i];
     } else if (Numbers[i] < Numbers[i + 1]) {
       const result = Numbers[i + 1] - Numbers[i];
-      const value = Object.fromEntries(
-        Object.entries(romanNumerals).filter(([_, value]) => value === result),
-      );
-      if (value) {
+      const filteredEntries = Object.entries(romanNumerals).filter((
+        [_, value],
+      ) => value === result);
+      if (filteredEntries.length === 1) {
         return "El numero Romano no Existe";
       }
       total.push(result);
@@ -114,10 +109,5 @@ function romanToInt(s: string): object | string {
     }
   }
 
-  result.numeroRomano = numberRoman.join("");
-  result.numeroEntero = total.reduce((acc, value) => acc + value, 0);
-
-  return result;
+  return total.reduce((acc, value) => acc + value, 0);
 }
-
-console.log(romanToInt("XX"))

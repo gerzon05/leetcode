@@ -18,19 +18,17 @@
 // Explanation: 121 reads as 121 from left to right and from right to left.
 //
 
-function isPalindrome(x: number): boolean {
-  const number: number = x
-  const Arraynumber = number.toString().split("")
-  const ArraysRever: string[] = []
-  for (let index = Arraynumber.length-1; index >= 0; index--) {
-    ArraysRever.push(Arraynumber[index])
+export function isPalindrome(x: number): boolean {
+  const number: number = x;
+  const Arraynumber = number.toString().split("");
+  const ArraysRever: string[] = [];
+  for (let index = Arraynumber.length - 1; index >= 0; index--) {
+    ArraysRever.push(Arraynumber[index]);
   }
-  const palindromeNumber: number = Number(ArraysRever.join(""))
+  const palindromeNumber: number = Number(ArraysRever.join(""));
 
   if (x === palindromeNumber) {
-    return true
+    return true;
   }
-  return false
-};
-
-console.log(isPalindrome(121))
+  return false;
+}
