@@ -24,19 +24,17 @@
 
 // Si no hay prefijo común, devuelve una cadena vacía «».
 
-// function longestCommonPrefix(strs: string[]): string {
-//   if (!strs.length) return "";
-//   let letters: string[] = [];
-//   let length: number = strs[1].length
-//   for (let index = 0; index < strs.length; index++) {
-//       if (strs[index].length < length) length = strs[index].length
-//   }
-//   for (let index = 0; index < length; index++) {
-    
-//   }
-//   console.log(letters)
-//   return "";
-// }
+export function longestCommonPrefix(strs: string[]): string {
+  if (!strs.length) return "";
 
+  let prefix = strs[0];
 
-// console.log(longestCommonPrefix(["gerzon","geronimo","luis"]))
+  for (let i = 1; i < strs.length; i++) {
+    while (strs[i].indexOf(prefix) !== 0) {
+      prefix = prefix.slice(0, -1);
+      if (!prefix) return "";
+    }
+  }
+
+  return prefix;
+}
