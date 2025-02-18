@@ -1,5 +1,5 @@
 import { assert } from "@std/assert";
-import { longestCommonPrefix } from "./Longest.ts";
+import { longestCommonPrefix } from "./longest.ts";
 
 Deno.test("Should return fl", () => {
   const RESPONSE = longestCommonPrefix(["flower", "flow", "flight"]);
