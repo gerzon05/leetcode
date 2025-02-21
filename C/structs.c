@@ -1,3 +1,4 @@
+#include <math.h>>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,8 +17,8 @@
 // a la función para calcular el área e imprima el resultado.
 
 // Estudiante: Define una estructura llamada Estudiante que contenga los
-// siguientes miembros: nombre (cadena), matricula (entero) y promedio
-// (flotante). Crea un array de 5 estudiantes. Pide al usuario que ingrese la
+// siguientes miembros: nombre (cadena), materia (cadena) y nota
+// (int). Crea un array de 5 estudiantes. Pide al usuario que ingrese la
 // información de cada estudiante y almacénala en el array. Luego, calcula e
 // imprime el promedio general de todos los estudiantes.
 
@@ -62,7 +63,20 @@ typedef struct Student {
   int note;
 } Student;
 
+typedef struct Coordiante {
+  int x;
+  int y;
+} Coordiante;
+
 float calculateArea(Rectangle data) { return data.width * data.height; };
+
+int calulateCordinate(Coordiante value1, Coordiante value2) {
+  int resCoordinate1 = value2.x - value1.x;
+  int resCoordinate2 = value2.y - value1.y;
+  int coorinate1 = sqrt(resCoordinate1);
+  int coorinate2 = sqrt(resCoordinate2);
+  return coorinate1 + coorinate2;
+};
 
 int main() {
   struct Persona Persona1;
@@ -106,7 +120,7 @@ int main() {
       "---------"
       "\n");
 
-  const int LENT_STUDENT = 5;
+  const int LENT_STUDENT = 1;
 
   char subject[50];
   Student *studens = (Student *)malloc(LENT_STUDENT * sizeof(char));
@@ -139,6 +153,21 @@ int main() {
   };
 
   free(studens);
+
+  Coordiante coordiante1;
+  Coordiante coordiante2;
+
+  coordiante1.x = 5;
+  coordiante1.y = 10;
+
+  coordiante2.x = 6;
+  coordiante2.y = 10;
+
+  int resultCoordinate = calulateCordinate(coordiante1, coordiante2);
+
+  printf("---------- Calcular Cordenada -----------------\n");
+  printf("la distancia entre las coordenadas es de: %d\n", resultCoordinate);
+  printf("-----------------------------------------\n");
 
   strcpy(Persona1.name, "Gerzon Rangel");
   strcpy(Persona1.shopping_cart.title, "Nissan 19");
