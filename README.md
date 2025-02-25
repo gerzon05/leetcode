@@ -21,6 +21,9 @@ Leetcode exercises for programming skills.
 
 - https://github.com/goldbergyoni/nodebestpractices/blob/spanish-translation/README.spanish.md
 
+**Learn Zig**
+- https://github.com/zouyee/zig-learning
+  
 ## License
 
 [MIT](./LICENSE)
