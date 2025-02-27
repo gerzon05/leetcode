@@ -23,6 +23,9 @@ Leetcode exercises for programming skills.
 
 **Learn Zig**
 - https://github.com/zouyee/zig-learning
+
+**React**
+- Hooks: http://usehooks.com
   
 ## License
 
