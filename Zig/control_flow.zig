@@ -9,7 +9,11 @@ pub fn main() void {
 
     newArray[2] = 34;
 
+    var name = "Gerzon";
+    name = "Rangel";
+
     std.debug.print("{d}\n", .{newArray[2]});
+    std.debug.print("{s}\n", .{name});
 
     if (Number >= 18) {
         std.debug.print("Eres Mayor de edad\n", .{});
