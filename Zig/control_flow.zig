@@ -20,4 +20,24 @@ pub fn main() void {
     } else {
         std.debug.print("Eres menor de edad\n", .{});
     }
+
+    const method = "GET";
+
+    if (std.mem.eql(u8, method, "GET") or std.mem.eql(u8, method, "HEAD")) {
+        std.debug.print("El metodo para obtener datos es: {s}\n", .{method});
+    } else if (std.mem.eql(u8, method, "POST")) {
+        std.debug.print("El metodo para guardar datos es: {s}\n", .{method});
+    } else {
+        std.debug.print("No eligiste un metodo valido\n", .{});
+    }
+
+    const rol = "Admin";
+
+    if (std.ascii.eqlIgnoreCase(rol, "Usuario")) {
+        std.debug.print("Estas logueado con el rol Usuario\n", .{});
+    } else if (std.ascii.eqlIgnoreCase(rol, "Admin")) {
+        std.debug.print("Estas logueado con el rol Admin\n", .{});
+    } else {
+        std.debug.print("No existe ese Rol\n", .{});
+    }
 }
