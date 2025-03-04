@@ -40,4 +40,23 @@ pub fn main() void {
     } else {
         std.debug.print("No existe ese Rol\n", .{});
     }
+
+    const numbers = [5]usize{ 45, 65, 23, 87, 12 };
+
+    for (0..numbers.len) |value| {
+        std.debug.print("{d} ", .{numbers[value]});
+    }
+    std.debug.print("\n", .{});
+
+    const number = 1;
+
+    switch (number) {
+        1 => return std.debug.print("paper", .{}),
+        2 => return std.debug.print("cotton", .{}),
+        3 => return std.debug.print("leather", .{}),
+        4 => return std.debug.print("flower", .{}),
+        5 => return std.debug.print("wood", .{}),
+        6 => return std.debug.print("sugar", .{}),
+        else => return std.debug.print("Does not exist", .{}),
+    }
 }
