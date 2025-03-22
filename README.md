@@ -6,12 +6,12 @@ Leetcode exercises for programming skills.
 
 **CSS**
 
-- https://www.shapedivider.app/
-- https://photogradient.com/
-- https://fontjoy.com/
-- https://colourpalettegenerator.com
-- https://cssgradienttext.com
-- https://easingwizard.com
+- https://www.shapedivider.app/ → Custom Shape Dividers
+- https://photogradient.com/ → gradient generator
+- https://fontjoy.com/ → Simplified font combination
+- https://colourpalettegenerator.com → Color Palette Generator
+- https://cssgradienttext.com → Gradient Text Generator
+- https://easingwizard.com → transition time 
 
 **APIs**
 
@@ -19,13 +19,18 @@ Leetcode exercises for programming skills.
 
 **NODE**
 
-- https://github.com/goldbergyoni/nodebestpractices/blob/spanish-translation/README.spanish.md
+- Docs: https://github.com/goldbergyoni/nodebestpractices/blob/spanish-translation/README.spanish.md
+
+**JavaScript**
+
+- https://perf.link → compare code
 
 **Learn Zig**
-- https://github.com/zouyee/zig-learning
+
+- Docs:  https://github.com/zouyee/zig-learning → 
 
 **React**
-- Hooks: http://usehooks.com
+- Hooks: http://usehooks.com 
   
 ## License
 
