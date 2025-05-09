@@ -65,4 +65,13 @@ func main() {
 	fmt.Println("valor de Pi: ", pi)
 	fmt.Println("Nombre de la Fuente: ", Typefont)
 	fmt.Println("La fuente tiene Negrita: ", Negrita)
+
+	// Operadores Numericos de Comparacion (==, >=, <=, >, <, !=)
+
+	equall := age == 18
+	ofAge := age >= 18
+
+	fmt.Println("La edad es igual a 18: ", equall)
+	fmt.Println("La edad es mayor o igual a 18: ", ofAge)
+
 }
