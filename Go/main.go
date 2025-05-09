@@ -30,6 +30,7 @@ var (
 	name    string
 	seconds float32 = 30.45
 	hours   int
+	yourAge int
 )
 
 // Constantes
@@ -73,5 +74,31 @@ func main() {
 
 	fmt.Println("La edad es igual a 18: ", equall)
 	fmt.Println("La edad es mayor o igual a 18: ", ofAge)
+
+	// Operadores logicos (&&, ||, !)
+
+	// pedir valores por consola
+	fmt.Print("Cual es tu edad: ")
+	fmt.Scan(&yourAge)
+	// fmt.Scanf("%d", &yourAge) especificar el tipo que debe recibir
+	fmt.Println("Tu edad es de ", yourAge, "años")
+
+	fmt.Printf("!hola %s¡ tu edad es de %d años.\n", name, yourAge)
+
+	// Bloques Condicionales
+
+	if yourAge < 18 {
+		fmt.Println("Eres menor de edad")
+	} else {
+		fmt.Println("Eres mayor de edad")
+	}
+
+	// Si la variable solo se va a uasar para la condicion es buena practica declararla dentro del if
+
+	if evenNumber := 4; evenNumber%2 == 0 {
+		fmt.Printf("El numero %d es par\n", evenNumber)
+	} else {
+		fmt.Printf("El numero %d es impar\n", evenNumber)
+	}
 
 }
