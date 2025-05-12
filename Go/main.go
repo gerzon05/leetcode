@@ -101,4 +101,31 @@ func main() {
 		fmt.Printf("El numero %d es impar\n", evenNumber)
 	}
 
+	// Switch - Case
+
+	switch year {
+	case 18:
+		fmt.Println("Is big.. In switch")
+	default:
+		fmt.Println("Is default in switch")
+	}
+
+	resultSum := sum()
+
+	fmt.Println("El resultado de suma es: ", resultSum)
+
+	resultRes := res(10, 5)
+
+	fmt.Println("El resultado de la resta: ", resultRes)
+
+}
+
+// Crear funciones base
+func sum() int {
+	return 5 + 10
+}
+
+// funcion con parametros
+func res(a int, b int) int {
+	return a - b
 }
