@@ -147,6 +147,20 @@ func main() {
 		fmt.Println(i)
 	}
 
+	// Ocultacion de Variables
+
+	a := 0
+	b := 0
+
+	if true {
+		a := 0
+		b = 1
+		a++
+		b++
+	}
+
+	fmt.Printf("Valor de a = %d, valor de b = %d\n", a, b)
+
 }
 
 // Crear funciones base
