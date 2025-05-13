@@ -26,11 +26,13 @@ import "fmt"
 // Definir Variables: (var,const) <nomber> <tipo> = valor || <nombre> := valor
 
 var (
-	age     int = 19
-	name    string
-	seconds float32 = 30.45
-	hours   int
-	yourAge int
+	age          int = 19
+	name         string
+	seconds      float32 = 30.45
+	hours        int
+	yourAge      int
+	valueProgram rune
+	close        rune
 )
 
 // Constantes
@@ -117,6 +119,33 @@ func main() {
 	resultRes := res(10, 5)
 
 	fmt.Println("El resultado de la resta: ", resultRes)
+
+	// Bucle For
+	// Primera forma
+	for {
+		fmt.Print("Ingresa \"s\" para salir de programa o \"n\" para continuar: ")
+		fmt.Scanf("%c\n", &valueProgram)
+		if valueProgram == 'n' || valueProgram == 'N' {
+			continue
+		} else if valueProgram == 's' || valueProgram == 'S' {
+			break
+		}
+		fmt.Println("El valor ingresado es Incorrecto")
+	}
+	fmt.Println("!Adios¡")
+
+	// Usar el for como el while de otros lenguaje de programacion
+	for close != 's' && close != 'S' {
+		fmt.Print("Salir? (s/n): ")
+		fmt.Scanf("%c\n", &close)
+	}
+	fmt.Println("!Gracias¡")
+
+	// for comun de todos los lenguajes
+
+	for i := 1; i < 10; i++ {
+		fmt.Println(i)
+	}
 
 }
 
