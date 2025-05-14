@@ -1,10 +1,10 @@
-package main
+package exercises
 
 import (
 	"fmt"
 )
 
-func main() {
+func Run() {
 	ParImpar(15)
 	ParImpar(30)
 }

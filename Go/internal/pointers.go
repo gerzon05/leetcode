@@ -1,10 +1,10 @@
-package main
+package pointers
 
 import (
 	"fmt"
 )
 
-func main() {
+func Run() {
 	fmt.Println("Aprenderemos sobre los punteros")
 
 	i := 10 // guardas el valor de la variables
