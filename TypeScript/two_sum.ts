@@ -22,36 +22,39 @@
 // =============================================================================
 
 export function twoSum(nums: number[], target: number): number[] {
-  const sum: number[] = [];
+  let sum: number[] = [];
   let suma: number = 0;
   for (let index = 0; index < nums.length; index++) {
+    suma = nums[index];
+    if (suma === target) {
+      sum.push(index);
+      return sum;
+    } else if (suma > target) {
+      continue;
+    } else {
+      sum.push(index);
+    }
     for (let index2 = index + 1; index2 < nums.length; index2++) {
-      if (sum.length > 0) {
-        suma += nums[index2];
-      } else {
-        suma += nums[index] + nums[index2];
-      }
-      if (suma > target) {
-        suma -= nums[index] + nums[index2];
-        console.log("res");
-      } else if (suma < target) {
-        if (sum.length > 0) {
+      suma += nums[index2];
+      if (suma === target) {
+        sum.push(index2);
+        return sum;
+      } else if (suma > target) {
+        if ((nums[index] + nums[index2]) === target) {
+          sum = [index, index2];
+          return sum;
+        } else if ((nums[index] + nums[index2]) < target) {
           sum.push(index2);
-          index++;
         } else {
-          sum.push(index, index2);
+          suma -= nums[index2];
+          continue;
         }
       } else {
-        if (sum.length == 0) {
-          sum.push(index, index2);
-        } else {
-          sum.push(index2);
-        }
-
-        index += nums.length;
-        index2 += nums.length;
+        sum.push(index2);
       }
     }
   }
   return sum;
 }
+
+console.log(twoSum([8, 2, 8, 2, 2], 6));

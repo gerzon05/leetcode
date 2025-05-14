@@ -1,6 +1,6 @@
 {
-  "lock": false,
+  "lock": false,  
   "imports": {
-    "@std/assert": "jsr:@std/assert"
+    "@std/assert": "jsr:@std/assert@^1.0.13"
   }
 }
