@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	pointers.Run()
+	pointers.RunPointer()
 }

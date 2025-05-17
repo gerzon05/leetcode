@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Tipos de datos en Go:
 
@@ -161,6 +163,17 @@ func main() {
 
 	fmt.Printf("Valor de a = %d, valor de b = %d\n", a, b)
 
+	fmt.Println("\n---------- FUNCION RETORNA MULTIPLES VALORES ------------------")
+
+	max, min := maxMin(8, 14)
+
+	fmt.Printf("El valor mayor es: %d y el menor es: %d\n", max, min)
+	fmt.Println("\n---------- FUNCION RETORNA MULTIPLES VALORES NO USAR UN VALOR  ------------------")
+
+	m, _ := maxMinValue(6, 10)
+
+	fmt.Printf("El valor mayor es: %d\n", m)
+
 }
 
 // Crear funciones base
@@ -171,4 +184,24 @@ func sum() int {
 // funcion con parametros
 func res(a int, b int) int {
 	return a - b
+}
+
+// funcion que retorna multiples valores
+func maxMin(a, b int) (int, int) {
+	if a > b {
+		return a, b
+	}
+	return b, a
+}
+
+// funcion que retorna multiples valores con nombre definido
+func maxMinValue(a, b int) (max int, min int) {
+	if a > b {
+		max = a
+		min = b
+	} else {
+		max = b
+		min = a
+	}
+	return
 }
