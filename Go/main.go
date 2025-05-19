@@ -174,6 +174,20 @@ func main() {
 
 	fmt.Printf("El valor mayor es: %d\n", m)
 
+	// Literales de Funciones
+
+	fmt.Println("\n =============== Literales de una funcion ================== ")
+
+	var operator func(int, int) int
+
+	operator = res
+
+	fmt.Println("Resultado de la resta: ", operator(10, 5))
+
+	operator = multiply
+
+	fmt.Println("Resultado de la resta: ", operator(10, 5))
+
 }
 
 // Crear funciones base
@@ -184,6 +198,10 @@ func sum() int {
 // funcion con parametros
 func res(a int, b int) int {
 	return a - b
+}
+
+func multiply(a int, b int) int {
+	return a * b
 }
 
 // funcion que retorna multiples valores
