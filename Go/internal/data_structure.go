@@ -58,8 +58,10 @@ func RunDataStructure() {
 	// lo recomendables es crear slice con longitud de 0 pero con la capacidad necesaria
 	fmt.Printf("\n3. Make\n")
 
-	sliceWithMake := make([]int, 20, 30)
+	sliceWithMake := make([]int, 20)
 	highCapacity := make([]int, 0, 2048)
+
+	sliceWithMake = append(sliceWithMake, 21)
 
 	fmt.Printf("Slice: %v - Longitud: %v - Capacidad: %v\n", sliceWithMake, len(sliceWithMake), cap(sliceWithMake))
 	fmt.Printf("Slice: %v - Longitud: %v - Capacidad: %v\n", highCapacity, len(highCapacity), cap(highCapacity))
@@ -84,11 +86,60 @@ func RunDataStructure() {
 
 	newCopy := copy(sliceCopy, original)
 
-	original[0] = 100
+	sliceCopy[0] = 100
 
 	fmt.Println("ver Slice original: ", original)
 	fmt.Println("ver Slice con Make: ", sliceCopy)
 
 	fmt.Println("Numeros copiados: ", newCopy, " Valores copiados: ", sliceCopy)
 
+	// Slice en funciones
+	fmt.Printf("\n5. Slice en funciones\n")
+
+	v := [3]int{10, 20, 30}
+	sl := []int{10, 20, 30}
+
+	firstValueCero(v, sl)
+
+	fmt.Println("Valores del arrays: ", v)
+	fmt.Println("Valores del slice: ", sl)
+
+	// Recorrer vectores (arrays) o slice
+	fmt.Printf("\n6. Recorrer vectores (arrays) o slice\n")
+
+	city := []string{"Valledupar", "Cartagena", "Barcelona", "Paris", "Londres"}
+
+	for i := 0; i < len(city); i++ {
+		fmt.Printf("inidice: %d - Valor: %s\n", i, city[i])
+	}
+
+	// range - forma mas optima de usar un cliclo
+	fmt.Println("")
+
+	for i, value := range city {
+		fmt.Printf("inidice: %d - Valor: %s\n", i, value)
+	}
+
+	// Crear fracciones de un slice
+	// se crean mutiple vista de un slice original pero siempre es la misma zona de memoria.
+	fmt.Printf("\n7. Crear fracciones de un slice\n")
+
+	sOriginal := []int{1, 2, 3, 4, 5, 6}
+	sShort := sOriginal[3:]
+
+	fmt.Println("Slice inicial: ", sOriginal)
+	fmt.Println("Slice corto: ", sShort)
+
+	sShort[0] = 20
+	fmt.Printf("\ncambio el valor de un elemento\n\n")
+
+	fmt.Println("Slice inicial: ", sOriginal)
+	fmt.Println("Slice corto: ", sShort)
+}
+
+func firstValueCero(arr [3]int, sli []int) {
+	arr[0] = 0
+	if len(sli) > 0 {
+		sli[0] = 0
+	}
 }
