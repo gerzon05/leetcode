@@ -188,6 +188,24 @@ func main() {
 
 	fmt.Println("Resultado de la resta: ", operator(10, 5))
 
+	fmt.Println("\n =============== Funciones con numero de parametro indefinidos ================== ")
+
+	resultSumaMultiParams := sumaInfiniteParams(1, 4, 7)
+
+	fmt.Println("El valor de la suma con multiple parametros es de: ", resultSumaMultiParams)
+
+	fmt.Println("\n =============== Operador Difusor ================== ")
+
+	numberSlice := []int{2, 5, 6, 3, 8}
+	numberSlice2 := []int{6, 7, 89}
+
+	resultSumaSlice := sumaInfiniteParams(numberSlice...)
+
+	fmt.Println("El valor de la suma con multiple paramentro pasando un slice: ", resultSumaSlice)
+
+	numberSlice = append(numberSlice, numberSlice2...) // para poder agregar un slice a otro slice usamos difusor (...)
+
+	fmt.Println("Resultado de agregar un slice sobre otro: ", numberSlice)
 }
 
 // Crear funciones base
@@ -222,4 +240,14 @@ func maxMinValue(a, b int) (max int, min int) {
 		min = a
 	}
 	return
+}
+
+func sumaInfiniteParams(numbers ...int) int {
+	result := 0
+
+	for _, value := range numbers {
+		result += value
+	}
+
+	return result
 }

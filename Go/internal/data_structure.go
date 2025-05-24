@@ -94,6 +94,7 @@ func RunDataStructure() {
 	fmt.Println("Numeros copiados: ", newCopy, " Valores copiados: ", sliceCopy)
 
 	// Slice en funciones
+
 	fmt.Printf("\n5. Slice en funciones\n")
 
 	v := [3]int{10, 20, 30}
@@ -105,6 +106,7 @@ func RunDataStructure() {
 	fmt.Println("Valores del slice: ", sl)
 
 	// Recorrer vectores (arrays) o slice
+
 	fmt.Printf("\n6. Recorrer vectores (arrays) o slice\n")
 
 	city := []string{"Valledupar", "Cartagena", "Barcelona", "Paris", "Londres"}
@@ -114,6 +116,7 @@ func RunDataStructure() {
 	}
 
 	// range - forma mas optima de usar un cliclo
+
 	fmt.Println("")
 
 	for i, value := range city {
