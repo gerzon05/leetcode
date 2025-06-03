@@ -30,8 +30,17 @@ Leetcode exercises for programming skills.
 - Docs:  https://github.com/zouyee/zig-learning → 
 
 **React**
-- Hooks: http://usehooks.com 
-  
+- Hooks: http://usehooks.com
+
+**Frontend**
+- Tour Virtual: https://Driver.js  → `Vue` `React` `Svelte` More...
+
+**Plantillas**
+- https://htmlrev.com
+
+**DB**
+- https://chartdb.io
+
 ## License
 
 [MIT](./LICENSE)
