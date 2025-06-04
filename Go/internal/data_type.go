@@ -3,6 +3,7 @@ package internal
 import (
 	"fmt"
 	"math/rand"
+	"strings"
 )
 
 func DataTypeRun() {
@@ -87,6 +88,40 @@ func DataTypeRun() {
 		fmt.Printf("Ejecucion %d: %v\n", i, generatorAll(cero, counter1, numberRandom))
 	}
 
+	fmt.Println()
+	fmt.Println("----------------- Receptores de Funciones (Metodos) ---------------------")
+	fmt.Println()
+
+	var sb strings.Builder
+
+	sb.WriteString("Hola")
+	sb.WriteString("!")
+	str := sb.String()
+
+	fmt.Println("valor del receptor", str)
+
+	phs := []ph{
+		ph(7), ph(1.2), ph(9),
+	}
+
+	for _, ph := range phs {
+		fmt.Printf("Un ph == %v es %v\n", ph, ph.category())
+	}
+
+	var c counter
+
+	c.increment()
+	c.increment()
+	c.increment()
+	c.increment()
+
+	fmt.Println("Valor: ", c)
+	c.reset(50)
+	fmt.Println("Se reinicio el contador: ", c)
+	c.increment()
+	c.increment()
+	fmt.Println("nuevos valores tras el reinicio: ", c)
+
 }
 
 // ----------------- Tipos Funcionales ---------------------
@@ -118,4 +153,29 @@ func generatorAll(gens ...Generator) []int {
 		nums = append(nums, value())
 	}
 	return nums
+}
+
+// Receptores de Funciones (Metodos)
+
+type ph float32
+
+func (p ph) category() string {
+	switch {
+	case p < 7:
+		return "àcido"
+	case p > 7:
+		return "Basico"
+	default:
+		return "neutro"
+	}
+}
+
+type counter int
+
+func (c *counter) increment() {
+	*c++
+}
+
+func (c *counter) reset(newValue int) {
+	*c = counter(newValue)
 }
