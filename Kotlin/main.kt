@@ -2,6 +2,8 @@ fun main() {
     println("Hello, World!")
 
     // ======= VARIABLES ================
+    // var = variable que puede cambiar
+    // val = variable inmutable (constante)
 
     var number: Int = 5
     number += 1
@@ -29,6 +31,22 @@ fun main() {
 
     println("EL numero mayor entre 10 y 40 es: ${maxOf(10,40)}")
 
+    println("\n ============== FOR LOPP ============== \n")
+
+    // ======= ARRAYS ================
+    val itemsFruits = listOf("apple", "banana", "kiwifruit")
+
+    // ====== FOR LOPP ==============
+    for (itemFruit in itemsFruits){
+        println(itemFruit)
+    }
+
+    println("\n ============== FOR LOPP INDEX ============== \n")
+
+    // ====== FOR LOPP INDEX ==============
+    for (index in itemsFruits.indices){
+        println("La posicion $index es la fruta ${itemsFruits[index]}")
+    }
 }
 
 // ======= CODICIONALES ============
